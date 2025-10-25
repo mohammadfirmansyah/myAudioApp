@@ -102,7 +102,7 @@ This project demonstrates:
 
 **Repository**: https://github.com/mohammadfirmansyah/myAudioApp
 
-**Maintained by**: Mohammad Firmansyah
+**Maintained by**: Mohammad Firman Syah
 
 **License**: MIT
 
