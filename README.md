@@ -7,6 +7,12 @@
 
 A React Native application that demonstrates advanced audio control with two independent audio players. Perfect for learning audio management and state handling in mobile apps!
 
+## 📚 Documentation
+
+- **[Contributing Guide](CONTRIBUTING.md)** - Learn how to contribute to this project
+- **[Build Information](BUILD_INFO.md)** - APK build details and testing checklist
+- **[Changelog](CHANGELOG.md)** - Version history and release notes
+
 ## ✨ Key Features
 
 ### 1. **Dual Independent Audio Players**
