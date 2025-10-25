@@ -1,5 +1,10 @@
 # 🎵 Multi-Audio Playback App
 
+[![GitHub](https://img.shields.io/badge/GitHub-myAudioApp-blue?logo=github)](https://github.com/mohammadfirmansyah/myAudioApp)
+[![React Native](https://img.shields.io/badge/React%20Native-0.81.5-blue?logo=react)](https://reactnative.dev/)
+[![Expo](https://img.shields.io/badge/Expo-~54.0.20-000020?logo=expo)](https://expo.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 Aplikasi React Native yang mendemonstrasikan kontrol audio dengan dua audio player independen.
 
 ## ✨ Fitur Utama
