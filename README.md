@@ -5,26 +5,26 @@
 [![Expo](https://img.shields.io/badge/Expo-~54.0.20-000020?logo=expo)](https://expo.dev/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Aplikasi React Native yang mendemonstrasikan kontrol audio dengan dua audio player independen.
+A React Native application that demonstrates advanced audio control with two independent audio players. Perfect for learning audio management and state handling in mobile apps!
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-### 1. **Dual Audio Players**
-- Dua audio player yang dapat beroperasi secara independen
-- Setiap player memiliki state management tersendiri
-- Dapat memutar dua audio secara bersamaan
+### 1. **Dual Independent Audio Players**
+- Two audio players that operate completely independently
+- Each player manages its own state separately
+- Play two different audio tracks simultaneously without conflicts
 
-### 2. **Kontrol Audio Lengkap**
-- **Play**: Memulai atau melanjutkan pemutaran audio
-- **Pause**: Menghentikan sementara (posisi tetap tersimpan)
-- **Stop**: Menghentikan dan mereset audio (membebaskan memori)
+### 2. **Complete Audio Controls**
+- **Play**: Start or resume audio playback from current position
+- **Pause**: Temporarily halt playback while preserving position
+- **Stop**: End playback and free up memory resources
 
-### 3. **UI/UX yang Diperbaiki**
-- ✅ Button dengan icon DAN text label
-- ✅ Status indikator real-time untuk setiap player
-- ✅ Layout responsif dengan ScrollView
-- ✅ Card-based design dengan shadow
-- ✅ Warna dan spacing yang konsisten
+### 3. **Enhanced UI/UX**
+- ✅ Buttons with both icons AND text labels for clarity
+- ✅ Real-time status indicators for each player
+- ✅ Responsive layout with ScrollView support
+- ✅ Modern card-based design with elegant shadows
+- ✅ Consistent color scheme and spacing throughout
 
 ## 📱 Tampilan Aplikasi
 
@@ -47,14 +47,14 @@ Aplikasi React Native yang mendemonstrasikan kontrol audio dengan dua audio play
 └─────────────────────────────────┘
 ```
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Technologies Used
 
-- **React Native** - Framework mobile
-- **Expo** - Development platform
-- **expo-av** - Audio/Video library
-- **React Hooks** - State management (useState)
+- **React Native** - Cross-platform mobile framework
+- **Expo** - Development platform and toolkit
+- **expo-av** - Professional Audio/Video library
+- **React Hooks** - Modern state management with useState
 
-## 📂 Struktur File yang Dibutuhkan
+## 📂 Required File Structure
 
 ```
 myAudioApp/
@@ -68,70 +68,70 @@ myAudioApp/
 └── app.json
 ```
 
-## 🎯 Practice Exercise (Completed)
+## 🎯 Practice Exercises (Completed!)
 
 ### ✅ Exercise 1: Add Text to Buttons
 **Requirement**: Change the buttons to have text along with the image.
 
 **Implementation**:
-- Setiap button sekarang memiliki icon DAN text label
-- Menggunakan View wrapper untuk menggabungkan icon dan text
-- Text muncul di bawah icon untuk UX yang lebih baik
+- Each button now features both an icon AND a text label
+- Uses a View wrapper to combine icon and text elegantly
+- Text appears below the icon for better user experience
 
 ### ✅ Exercise 2: Add Second Audio Player
-**Requirement**: Add another audio and alter your app.
+**Requirement**: Add another audio track and enhance your app.
 
 **Implementation**:
-- Ditambahkan Audio Player 2 dengan state independen
-- Setiap player memiliki kontrol Play, Pause, Stop sendiri
-- Status indicator menampilkan state masing-masing player
-- Dapat menggunakan audio file berbeda (ganti di require())
+- Added Audio Player 2 with completely independent state
+- Each player has its own Play, Pause, and Stop controls
+- Status indicators display the state of each player separately
+- Easily customize by swapping audio files in the require() statement
 
-## 🚀 Cara Build APK
+## 🚀 How to Build APK
 
-### Prasyarat:
-1. Android Studio terinstall
-2. Android SDK terkonfigurasi
-3. Node.js dan npm terinstall
+### Prerequisites:
+1. Android Studio installed on your system
+2. Android SDK properly configured
+3. Node.js and npm installed
 
-### Langkah Build:
+### Build Steps:
 
-1. **Generate folder Android native**:
+1. **Generate Android native folder**:
 ```bash
 npx expo prebuild --platform android
 ```
 
-2. **Buat file local.properties** (sudah dibuat otomatis):
+2. **Create local.properties file** (automatically generated):
 ```properties
 sdk.dir=C:\\Users\\moham\\AppData\\Local\\Android\\Sdk
 ```
 
-3. **Build APK Release**:
+3. **Build Release APK**:
 ```bash
 cd android
 .\gradlew.bat assembleRelease
 ```
 
-4. **Lokasi APK hasil build**:
+4. **Find your APK here**:
 ```
 android/app/build/outputs/apk/release/app-release.apk
 ```
 
-## 📝 Penjelasan Kode Penting
+## 📝 Important Code Explanations
 
-### State Management untuk Dual Players
+### State Management for Dual Players
 ```javascript
 // Player 1 state
 const [isPlaying1, setIsPlaying1] = useState(false);
 const [sound1, setSound1] = useState(null);
 
-// Player 2 state - independent dari Player 1
+// Player 2 state - completely independent from Player 1
 const [isPlaying2, setIsPlaying2] = useState(false);
 const [sound2, setSound2] = useState(null);
 ```
 
 ### Generic Audio Functions
-Fungsi audio dibuat generic dengan parameters agar dapat digunakan untuk multiple players:
+Audio functions are designed to be generic with parameters, making them reusable for multiple players:
 ```javascript
 async function playSound(sound, setSound, setIsPlaying, audioFile)
 async function pauseSound(sound, isPlaying, setIsPlaying)
@@ -139,41 +139,41 @@ async function stopSound(sound, setSound, setIsPlaying)
 ```
 
 ### Memory Management
-Fungsi `stopSound()` melakukan `unloadAsync()` untuk membebaskan memori:
+The `stopSound()` function uses `unloadAsync()` to free up memory resources:
 ```javascript
-await sound.unloadAsync(); // Penting untuk performa aplikasi
+await sound.unloadAsync(); // Essential for optimal app performance
 ```
 
-## 🎨 Kustomisasi
+## 🎨 Customization Guide
 
-### Mengganti Audio File:
-Ganti path di fungsi `playSound()`:
+### Changing Audio Files:
+Simply update the path in the `playSound()` function:
 ```javascript
-require('./assets/namaFileAudioAnda.m4a')
+require('./assets/yourAudioFileName.m4a')
 ```
 
-### Menambahkan Player Ketiga:
-1. Tambahkan state baru: `isPlaying3`, `sound3`
-2. Duplikasi section playerContainer
-3. Update callback dengan state yang sesuai
+### Adding a Third Player:
+1. Add new state variables: `isPlaying3`, `sound3`
+2. Duplicate the playerContainer section
+3. Update callbacks with the appropriate state
 
-## 📖 Pembelajaran
+## 📖 Learning Outcomes
 
-### Konsep yang Dipelajari:
-- ✅ State management dengan multiple useState
-- ✅ Async/await untuk operasi audio
-- ✅ Component composition (Image + Text dalam Button)
-- ✅ StyleSheet best practices dengan komentar
-- ✅ Memory management (unload audio)
-- ✅ Generic function dengan parameters
+### Concepts Covered:
+- ✅ State management with multiple useState hooks
+- ✅ Async/await for audio operations
+- ✅ Component composition (combining Image + Text in Buttons)
+- ✅ StyleSheet best practices with clear comments
+- ✅ Memory management (properly unloading audio)
+- ✅ Generic functions with parameters for reusability
 
-## 📄 Lisensi
+## 📄 License
 
-Project ini dibuat untuk tujuan pembelajaran.
+This project is created for educational purposes under the MIT License.
 
 ## 👨‍💻 Developer
 
-Mohammad Firmansyah
+Mohammad Firman Syah
 
 ---
-**Note**: Untuk penggunaan production, pertimbangkan untuk menambahkan error handling, loading states, dan audio file validation.
+**Note**: For production use, consider adding error handling, loading states, and audio file validation to make your app more robust and user-friendly.

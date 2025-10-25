@@ -1,8 +1,8 @@
 # 📦 Build Information
 
-## APK Build Success
+## APK Build Success! 🎉
 
-**Build Date**: 25 Oktober 2025, 10:32:25  
+**Build Date**: October 25, 2025 at 10:32:25  
 **Build Type**: Release  
 **APK Size**: ~59.7 MB  
 **Location**: `android/app/build/outputs/apk/release/app-release.apk`
@@ -29,23 +29,23 @@
 
 ## Installation Instructions
 
-1. Transfer file `app-release.apk` ke perangkat Android Anda
-2. Aktifkan "Install from Unknown Sources" di Settings
-3. Buka file APK dan install
-4. Jalankan aplikasi "myAudioApp"
+1. Transfer the `app-release.apk` file to your Android device
+2. Enable "Install from Unknown Sources" in your device Settings
+3. Open the APK file and follow the installation prompts
+4. Launch the "myAudioApp" application and enjoy!
 
 ## Testing Checklist
 
-- [ ] Install APK di perangkat Android
+- [ ] Install APK on Android device
 - [ ] Test Audio Player 1 - Play button
 - [ ] Test Audio Player 1 - Pause button
 - [ ] Test Audio Player 1 - Stop button
 - [ ] Test Audio Player 2 - Play button
 - [ ] Test Audio Player 2 - Pause button
 - [ ] Test Audio Player 2 - Stop button
-- [ ] Test kedua player berjalan bersamaan
+- [ ] Test both players running simultaneously
 - [ ] Verify status indicators update correctly
-- [ ] Test pada berbagai ukuran layar
+- [ ] Test on various screen sizes
 
 ## Repository
 
@@ -53,14 +53,14 @@
 
 ## Next Steps
 
-1. Test APK pada real device
-2. Gather user feedback
+1. Test APK on a real device
+2. Gather user feedback from testing
 3. Iterate based on testing results
-4. Consider adding features:
-   - Volume controls
-   - Progress bar
+4. Consider adding exciting new features:
+   - Volume controls for each player
+   - Visual progress bar
    - Playlist functionality
-   - Audio file selection from device
+   - Audio file selection from device storage
 
 ---
 **Built with ❤️ using React Native & Expo**
